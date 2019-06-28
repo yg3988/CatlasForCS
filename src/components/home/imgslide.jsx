@@ -4,20 +4,6 @@ import React from 'react';
 //styles
 import './imgslide.css';
 
-const slideEvent = (idx) => {
-    let arrJumboImages = document.getElementsByClassName("jumbo-images");
-    let circleNavBtn = document.getElementsByClassName("circle-nav-btn");
-    let len = arrJumboImages.length;
-    console.log(idx);
-    for(let i = 0; i < len; i++){
-        circleNavBtn[i].style.backgroundColor="rgba(0,0,0,0)";
-        if(i==idx){
-            circleNavBtn[i].style.backgroundColor="#fff";
-        }
-    }
-    arrJumboImages[0].style.marginLeft=`calc(((-100 / ${len}) * ${idx}) * 1%)`;
-}
-
 const importAllImages = (r) =>{
     let images = {};
     let idx = 0;
@@ -28,17 +14,17 @@ const importAllImages = (r) =>{
     return images;
 }
 
-const imagesRadioBtns = (images) => {
+const imagesRadioBtns = (images, handleClickEvent) => {
     let radios = [];
     
     for (let props in images){
         props == 0 ?
             radios.push(
-                <input type="radio" key={props} id={`r${props}`} name="circle-nav-btn" className='radio-btn' onClick={(e) => slideEvent(props)} defaultChecked/>
+                <input type="radio" key={props} id={`r${props}`} name="circle-nav-btn" className='radio-btn' onClick={(e) => handleClickEvent(props)} defaultChecked/>
             )
         :
             radios.push(
-                <input type="radio" key={props} id={`r${props}`} name="circle-nav-btn" className='radio-btn' onClick={(e) => slideEvent(props)}/>
+                <input type="radio" key={props} id={`r${props}`} name="circle-nav-btn" className='radio-btn' onClick={(e) => handleClickEvent(props)}/>
             )
     }
     return radios;
@@ -67,12 +53,12 @@ const imagesNavigation = (images) => {
     return labels;
 }
 
-const ImageSlide = () => {
+const ImageSlide = ({handleClickEvent}) => {
     const images = importAllImages(require.context('../../images',false, /\.(png|jpe?g)$/));
-
+    console.log(handleClickEvent);
     return (
         <div className='slide-body'>
-            {imagesRadioBtns(images)}
+            {imagesRadioBtns(images, handleClickEvent)}
             <div id="slider" className="image-slide">
                 {showImages(images)}
             </div>

@@ -10,6 +10,47 @@ import {
 //style sheet
 import "./home-containers.css";
 
+let jumboIndex = 0;
+
+const imageSliderInit = () => {
+    let slider = document.getElementById("slider");
+    let images = document.getElementById("jumbo-image");
+    let arrSliderImages = document.getElementsByClassName("jumbo-images");
+}
+
+const timeoutSlideEvent = () =>{
+    let arrJumboImages = document.getElementsByClassName("jumbo-images");
+    let circleNavBtn = document.getElementsByClassName("circle-nav-btn");
+    let len = arrJumboImages.length;
+
+    for (let i = 0; i < len; i++){
+        arrJumboImages[i].style.display = "none";
+        circleNavBtn[i].style.backgroundColor="rgba(0,0,0,0)";
+    }
+    
+    jumboIndex++;
+
+    if (jumboIndex > len) {jumboIndex = 1}
+    circleNavBtn[jumboIndex-1].style.backgroundColor="#fff";
+    arrJumboImages[jumboIndex-1].style.display = "block";
+
+    setTimeout(timeoutSlideEvent, 2500);
+}
+
+const slideEvent = (idx) => {
+    let arrJumboImages = document.getElementsByClassName("jumbo-images");
+    let circleNavBtn = document.getElementsByClassName("circle-nav-btn");
+    let len = arrJumboImages.length;
+
+    for(let i = 0; i < len; i++){
+        arrJumboImages[i].style.display = "none";
+        circleNavBtn[i].style.backgroundColor="rgba(0,0,0,0)";
+    }
+    jumboIndex = idx;
+    circleNavBtn[idx].style.backgroundColor="#fff";
+    arrJumboImages[idx].style.display="block"
+}
+
 class Home extends Component {
     constructor(props) {
         super(props);
@@ -17,38 +58,17 @@ class Home extends Component {
     }
     
     componentDidMount(){
-        let jumboIndex = 0;
         imageSliderInit();
-        // timeoutSlideEvent();
-
-        function imageSliderInit(){
-            let slider = document.getElementById("slider");
-            let images = document.getElementById("jumbo-image");
-            let arrSliderImages = document.getElementsByClassName("jumbo-images");
-            
-            slider.style.width = `calc(100% * ${arrSliderImages.length})`;
-            images.style.width = `calc(100% / ${arrSliderImages.length})`;
-        }
-        // function timeoutSlideEvent(){
-        //     console.log("start");
-        //     let arrJumbo = document.getElementsByClassName("jumbo-images");
-        //     console.log(arrJumbo);
-        //     for (let i = 0; i < arrJumbo.length; i++){
-        //         arrJumbo[i].style.display = "none";
-        //     }
-        //     jumboIndex++;
-        //     if (jumboIndex > arrJumbo.length) {jumboIndex = 1}
-        //     arrJumbo[jumboIndex-1].style.display = "block";
-        //     setTimeout(slideEvent, 2500);
-        // }
-
+        timeoutSlideEvent();
     }
     
     render() { 
         return ( 
             <div className="containers">
-                <div className="jumbo-image">
-                    <ImageSlide/>
+                <div className="jumbo-slider">
+                    <ImageSlide
+                        handleClickEvent={slideEvent}
+                    />
                 </div>
                 <div className="main-contents">
                     <MainPage/>

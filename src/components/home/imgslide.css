@@ -9,16 +9,8 @@
 
 .slide-image-animation{
     transition: 0.6s;
-    animation: animateright 0.8s;
+    animation: animateright 0.7s;
 }
-
-/* #r0:checked ~ .slides > .s0{
-    animation: animateright 0.8s;
-}
-
-#r1:checked ~ .slides > .s0{
-    animation: animateright 0.8s;
-} */
 
 .navigation{
     position: absolute;
@@ -53,12 +45,12 @@
 }
 
 @keyframes animateright{
-    from{
+    0%{
         transform: translateX(100%);
         opacity: 0;
     }
 
-    to{
+    100%{
         transform: translateX(0%);
         opacity: 1;
     }
