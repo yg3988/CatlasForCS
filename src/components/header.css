@@ -32,15 +32,14 @@
 
 .show-menu-btn{
     float: right;
+    margin-top: 18px;
 }
 
 .show-menu-btn > FontAwesomeIcon{
     line-height: 100px;
 }
 
-.menu a:hover,
-.show-menu-btn:hover,
-.hide-menu-btn:hover{
+.menu a:hover{
     border-bottom: 3px solid #3498db;
 }
 

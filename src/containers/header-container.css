@@ -1,5 +1,5 @@
 .nav {
-    height: 73px;
+    height: 77px;
     background: #000000d0;
     border-bottom: 3px solid rgb(44, 44, 44);
     border-bottom-left-radius: 2px;
@@ -7,4 +7,10 @@
     padding: 0 300px 0px 300px;
     color: #fff;
     user-select: none;
+}
+
+@media screen and (max-width:1500px){
+    .nav{
+        padding: 0 100px 0 100px;
+    }
 }
