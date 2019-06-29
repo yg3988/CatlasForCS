@@ -22,6 +22,19 @@
     transition: 0.1s;
 }
 
+.sign-in{
+    border: 2px solid #3498db;
+    padding: 5px;
+    border-radius: 5%;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.sign-in:hover{
+    background-color: #3498db;
+}
+
 .show-menu-btn,
 .hide-menu-btn {
     transition: 0.4s;

@@ -1,6 +1,9 @@
 .main-contents{
     padding: 0 300px 0 300px;
-    margin-top: 5em;
+}
+
+.contents-containers{
+    margin-top: 40px;
 }
 @media screen and (max-width:1500px){
     .main-contents{

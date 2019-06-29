@@ -1,0 +1,14 @@
+.signin-input-form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 400px;
+    height: 500px;
+    
+    border: 2px solid #c2c2c2;
+    border-radius: 9px;
+
+    background-color: #efefef;
+}

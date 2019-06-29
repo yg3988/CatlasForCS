@@ -1,0 +1,28 @@
+.navbar-container{
+    height: 62px;
+    background-color: #000000d0;
+    text-align: center;
+    color: #000;
+}
+
+.menu-items{
+    display: inline;
+    line-height: 70px;
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+}
+
+.menu-items:hover{
+    color: #3498db;
+    border-bottom: 4px solid #3498db;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+a:hover{
+    color: #3498db;
+}

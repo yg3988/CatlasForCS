@@ -1,6 +1,7 @@
 //node_modules
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React                from 'react';
+import { Link }             from 'react-router-dom';
+import { FontAwesomeIcon }  from '@fortawesome/react-fontawesome';
 
 //stylesheet
 import "./header.css"
@@ -18,6 +19,7 @@ const ComponentHeader = ({title}) => {
             <ul className="menu">
                 <a href="#">Home</a>
                 <a href="#">About</a>
+                <span className="sign-in">SignIn</span>
                 <label htmlFor="chk" className="hide-menu-btn">
                 <FontAwesomeIcon icon="times"/></label>
             </ul>

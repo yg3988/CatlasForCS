@@ -8,7 +8,12 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 //Store
 import Store from "./store/store";
 //Containers
-import { Header, Home } from 'containers';
+import { 
+  Header, 
+  Home,
+  SignIn,
+  Footer
+} from 'containers';
 
 library.add(faBars, faTimes);
 
@@ -25,7 +30,9 @@ class App extends Component {
         <Header/>
         <BrowserRouter>          
           <Route exact path="/" component={Home}/>
+          <Route exact path="/signin" component={SignIn}/>
         </BrowserRouter>
+        <Footer/>
       </Store.Provider>
     );
   }
