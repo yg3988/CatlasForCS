@@ -16,6 +16,7 @@ import {
 import "./home-containers.css";
 
 let jumboIndex = 0;
+let isHome = true;
 
 const timeoutSlideEvent = () =>{
   let arrJumboImages = document.getElementsByClassName("jumbo-images");
@@ -31,10 +32,11 @@ const timeoutSlideEvent = () =>{
 
   if (jumboIndex > len) {jumboIndex = 1}
 
-  circleNavBtn[jumboIndex-1].style.backgroundColor="#fff";
-  arrJumboImages[jumboIndex-1].style.display = "block";
-
-  setTimeout(timeoutSlideEvent, 2500);
+  if(isHome){
+    circleNavBtn[jumboIndex-1].style.backgroundColor="#fff";
+    arrJumboImages[jumboIndex-1].style.display = "block";
+    setTimeout(timeoutSlideEvent, 2500);
+  }
 }
 
 const slideEvent = (idx) => {
@@ -58,7 +60,14 @@ class Home extends Component {
   }
     
   componentDidMount(){
+    console.log("componentDidMount");
+    isHome = true;
     timeoutSlideEvent();
+  }
+
+  componentWillUnmount(){
+    isHome = false;
+    console.log("componentWillUnmount");
   }
     
   render() { 

@@ -1,14 +1,67 @@
+.signin-header{
+    padding-top: 20px;
+    padding-bottom: 30px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 100;
+}
+
 .signin-input-form{
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    width: 400px;
-    height: 500px;
+    width: 300px;
+    height: 380px;
     
     border: 2px solid #c2c2c2;
     border-radius: 9px;
 
     background-color: #efefef;
+}
+
+.form-box{
+    padding: 0 24px;
+}
+
+.input-box{
+    display: block;
+}
+
+.input-box + .input-box{
+    padding-top: 14px;
+}
+
+.input-label{
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.input-form{
+    margin-top: 8px;
+    padding: 6px 8px;
+    width: 234px;
+    height: 20px;
+
+    border: 1px solid #c2c2c2;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.btn-sign{
+    width: 252px;
+    height: 36px;
+}
+
+.btn-signin{
+    margin-top: 16px;
+}
+
+.btn-signup{
+    margin-top: 4px;
+}
+
+.signup-box{
+    padding: 0 24px;
 }

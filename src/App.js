@@ -7,6 +7,9 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 //Store
 import Store from "./store/store";
+
+//styles
+import 'App.css'
 //Containers
 import { 
   Header, 
@@ -27,10 +30,10 @@ class App extends Component {
   render() { 
     return (
       <Store.Provider value={this.state} className="App">
-        <Header/>
-        <BrowserRouter>          
+        <BrowserRouter>
+          <Header/>
           <Route exact path="/" component={Home}/>
-          <Route exact path="/signin" component={SignIn}/>
+          <Route exact path="/login" component={SignIn}/>
         </BrowserRouter>
         <Footer/>
       </Store.Provider>

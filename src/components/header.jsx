@@ -9,18 +9,20 @@ import "./header.css"
 const ComponentHeader = ({title}) => {
     return (
         <div>
-            <h2 className="logo">
-                {title}
-            </h2>
+            <p className="header-title">
+                <Link to="/" className="lnk header-lnk-title">{title}</Link>
+            </p>
             <input type="checkbox" id="chk"/>
-            <label htmlFor="chk" className="show-menu-btn">
+            <label htmlFor="chk" className="header-show-menu-btn">
                 <FontAwesomeIcon icon="bars"/>
             </label>
-            <ul className="menu">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <span className="sign-in">SignIn</span>
-                <label htmlFor="chk" className="hide-menu-btn">
+            <ul className="header-menu">
+                <Link to="/" className="lnk header-menu-items header-menu-items-unborder">Home</Link>
+                <a href="#" className="lnk header-menu-items header-menu-items-unborder">About</a>
+                <Link to="/login" className="lnk header-menu-items">
+                    <span className="header-sign-in">Sign In</span>
+                </Link>
+                <label htmlFor="chk" className="header-hide-menu-btn">
                 <FontAwesomeIcon icon="times"/></label>
             </ul>
         </div>

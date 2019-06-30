@@ -17,7 +17,7 @@ class Header extends Component {
     }
     render() { 
         return (
-            <div className="nav">
+            <div className="header">
                 <Store.Consumer>
                     {(store) => (
                         <ComponentHeader title={store.title}/>

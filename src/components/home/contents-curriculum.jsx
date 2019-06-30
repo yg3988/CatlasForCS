@@ -8,6 +8,7 @@ const Curriculum = () => {
     return (
         <div className="contents-containers contents-curriculum" id="m2">
             <h2>학사과정 및 교과를 알려드립니다.</h2>
+            <button className="btn btn-primary">자세히 보기</button>
         </div>
     );
 }

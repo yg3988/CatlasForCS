@@ -11,7 +11,7 @@ const navList = arrMenuItems.map(
         console.log(item, index);
         return (
             <li key={index} className="menu-items">
-                <a href={`#m${index}`}>
+                <a href={`#m${index}`} className="lnk">
                     {item}
                 </a>
             </li>

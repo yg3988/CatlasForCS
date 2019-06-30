@@ -1,6 +1,8 @@
 //node_modules
 import React, { Component } from 'react';
 
+//Store
+import Store from "store/store";
 //styles
 import './signin-containers.css';
 
@@ -15,7 +17,11 @@ class SignIn extends Component {
     render() { 
         return (
             <div className="signin-container">
-                <SignInForm/>
+                <Store.Consumer>
+                    {(store) => (
+                        <SignInForm title={store.title}/>
+                    )}
+                </Store.Consumer>
             </div>
         );
     }

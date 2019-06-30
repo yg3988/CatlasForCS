@@ -35,7 +35,12 @@ const showImages = (images) => {
 
     for (let props in images){
         array.push(
-            <img key={props} src={images[props]} alt={props} id="jumbo-image" className={`slide jumbo-images s${props} slide-image-animation`}/>
+            <div className="slide-image-box">
+                <img key={props} src={images[props]} alt={props} id="jumbo-image" className={`jumbo-images s${props} slide-image-animation`}/>
+                <div className="slide jumbo-image-about">
+                    <div className="jumbo-image-about-contents">대충 내용이라는 글</div>
+                </div>
+            </div>
         )
     }
 
