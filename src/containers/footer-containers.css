@@ -1,6 +1,12 @@
 .footer-container{
-    height: 140px;
+    height: 120px;
     background-color: #000000d0;
     color: #fff;
     padding: 10px 300px;
+}
+
+@media screen and (max-width: 820px){
+    .footer-container{
+        padding: 10px 16px
+    }
 }

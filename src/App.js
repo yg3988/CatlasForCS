@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import { library } from '@fortawesome/fontawesome-svg-core'
 //icons
-import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTimes, faBinoculars, faBook, faCalendarAlt, faHandHoldingHeart } from '@fortawesome/free-solid-svg-icons';
 
 //Store
 import Store from "./store/store";
@@ -18,7 +18,7 @@ import {
   Footer
 } from 'containers';
 
-library.add(faBars, faTimes);
+library.add(faBars, faTimes, faBinoculars, faBook, faCalendarAlt, faHandHoldingHeart);
 
 class App extends Component {
   constructor(props) {

@@ -19,7 +19,7 @@ let jumboIndex = 0;
 let isHome = true;
 
 const timeoutSlideEvent = () =>{
-  let arrJumboImages = document.getElementsByClassName("jumbo-images");
+  let arrJumboImages = document.getElementsByClassName("slide-image-box");
   let circleNavBtn = document.getElementsByClassName("circle-nav-btn");
   let len = arrJumboImages.length;
 
@@ -40,7 +40,7 @@ const timeoutSlideEvent = () =>{
 }
 
 const slideEvent = (idx) => {
-  let arrJumboImages = document.getElementsByClassName("jumbo-images");
+  let arrJumboImages = document.getElementsByClassName("slide-image-box");
   let circleNavBtn = document.getElementsByClassName("circle-nav-btn");
   let len = arrJumboImages.length;
 
@@ -80,11 +80,21 @@ class Home extends Component {
           </div>
           <ContentsNavBar/>
           <div className="main-contents">
-            <About/>
-            <Members/>
-            <Curriculum/>
-            <Notice/>
-            <Board/>
+            <div className="section">
+              <About/>
+            </div>
+            <div className="section">
+              <Members/>
+            </div>
+            <div className="section">
+              <Curriculum/>
+            </div>
+            <div className="section">
+              <Notice/>
+            </div>
+            <div className="section">
+              <Board/>
+            </div>
           </div>
         </div>
       );

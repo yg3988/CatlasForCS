@@ -1,3 +1,130 @@
-.contents-curriculum{
-    height: 400px;
+.section-curriculum{
+    display: grid;
+    grid-gap: 0;
+    grid-template-areas:
+        'curriculum-contents curriculum-contents curriculum curriculum-goal'
+        'curriculum-contents curriculum-contents curriculum-schedule scholarship';
+}
+
+.curriculum-contents {
+    grid-area: curriculum-contents;
+    min-height: 400px;
+    justify-content: center;
+}
+
+.curriculum {
+    grid-area: curriculum;
+}
+
+.curriculum-goal {
+    grid-area: curriculum-goal;
+}
+
+.curriculum-schedule {
+    grid-area: curriculum-schedule;
+}
+
+.scholarship {
+    grid-area: scholarship;
+}
+
+@media screen and (max-width: 1920px) {
+    .box {
+        padding: 10px 10px;
+        border-bottom: 1px solid #c2c2c2;
+        border-right: 1px solid #c2c2c2;
+    }
+    
+    .box:nth-child(2n) {
+        border-left: 1px solid #c2c2c2;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .curriculum-container {
+        min-height: 643px;
+    }
+
+    .section-curriculum {
+        display: grid;
+        grid-gap: 0;
+        grid-template-areas:
+            'curriculum-contents curriculum-contents'
+            'curriculum curriculum-goal'
+            'curriculum-schedule scholarship';
+    }
+
+    .box {
+        border: none;
+        border-top: 1px solid #c2c2c2;
+        border-right: 1px solid #c2c2c2;
+    }
+
+    .curriculum-contents {
+        min-height: 200px;
+    }
+
+    .curriculum {
+        min-height: 200px;
+    }
+    
+    .curriculum-goal {
+        min-height: 200px;
+    }
+    
+    .curriculum-schedule {
+        min-height: 200px;
+    }
+    
+    .scholarship {
+        min-height: 200px;
+    }
+}
+
+@media screen and (max-width: 820px) {
+    .curriculum-container {
+        min-height: 1184px;
+        padding: 0;
+    }
+    
+    .box {
+        border: none;
+        border-top: 1px solid #c2c2c2;
+    }
+
+    .box:nth-child(2n) {
+        border-left: none;
+    }
+
+    .section-curriculum {
+        display: grid;
+        grid-gap: 0;
+        grid-template-areas:
+            'curriculum-contents'
+            'curriculum'
+            'curriculum-goal'
+            'curriculum-schedule'
+            'scholarship';
+    }
+
+    .curriculum-contents {
+        min-height: 300px;
+        border: none;
+    }
+
+    .curriculum {
+        min-height: 200px;
+    }
+    
+    .curriculum-goal {
+        min-height: 200px;
+    }
+    
+    .curriculum-schedule {
+        min-height: 200px;
+    }
+    
+    .scholarship {
+        min-height: 200px;
+    }
 }

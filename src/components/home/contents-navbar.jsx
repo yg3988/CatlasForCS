@@ -8,7 +8,6 @@ const arrMenuItems = ["학과소개", "구성원", "교과", "소식", "게시�
 
 const navList = arrMenuItems.map(
     (item, index) => {
-        console.log(item, index);
         return (
             <li key={index} className="menu-items">
                 <a href={`#m${index}`} className="lnk">

@@ -35,11 +35,9 @@ const showImages = (images) => {
 
     for (let props in images){
         array.push(
-            <div className="slide-image-box">
-                <img key={props} src={images[props]} alt={props} id="jumbo-image" className={`jumbo-images s${props} slide-image-animation`}/>
-                <div className="slide jumbo-image-about">
-                    <div className="jumbo-image-about-contents">대충 내용이라는 글</div>
-                </div>
+            <div key={props} style={{backgroundImage: `url(${images[props]})`}} className={`slide-image-box s${props} slide-image-animation`}>
+                {/* <img src={images[props]} alt={props} id="jumbo-image" className={`jumbo-images s${props} slide-image-animation`}/> */}
+                    <div className="jumbo-image-about">대충 내용이라는 글</div>
             </div>
         )
     }
@@ -60,7 +58,7 @@ const imagesNavigation = (images) => {
 
 const ImageSlide = ({handleClickEvent}) => {
     const images = importAllImages(require.context('../../images',false, /\.(png|jpe?g)$/));
-    console.log(handleClickEvent);
+
     return (
         <div className='slide-body'>
             {imagesRadioBtns(images, handleClickEvent)}
