@@ -62,3 +62,7 @@ body{
 .btn-secondary:hover{
     background-color: #C9C9C9;
 }
+
+.contents{
+    height: calc(100vh - 80px);
+}

@@ -13,8 +13,6 @@
 .jumbo-image-about{
     padding: 0 48px;
     position: absolute;
-    top: 80px;
-    left: 0;
     width: 100%;
     height: calc(100vw / 16 * 9 - 180px);
     display: flex;
@@ -33,6 +31,10 @@
     font-size: 80px;
     font-weight: bold;
     color: #fff
+}
+
+.image-about:hover{
+    background-color: rgb(0, 0, 0);
 }
 
 .slide-image-box:hover > .jumbo-image-about{
@@ -70,7 +72,6 @@
 .circle-nav-btn:hover{
     background-color: #fff;
 }
-
 
 #r0:checked ~ .navigation > label#dot0{
     background-color: #fff;

@@ -1,6 +1,7 @@
 .section h2{
     margin-bottom: 12px;
 }
+
 .section:nth-child(2n){
     background-color: #333;
 }
@@ -10,14 +11,27 @@
 }
 
 .contents-containers{
-    height: 400px;
+    height: 462px;
     padding: 0 220px;
 }
 
 .contents-containers h2{
-    padding-top: 24px;
+    padding-top: 62px;
+    font-size: 36px;
 }
 
+.pram{
+    font-size: 20px;
+    padding: 0 20px 24px 20px;
+}
+
+.lorem-pram-light {
+    color: #fff;
+}
+
+.lorem-pram-dark {
+    color: #000;
+}
 .box{
     transition: 0.4s;
     text-align: center;
@@ -46,5 +60,11 @@
 @media screen and (max-width: 820px){
     .contents-containers{
         padding: 0px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .contents-containers{
+        height: 490px;
     }
 }
