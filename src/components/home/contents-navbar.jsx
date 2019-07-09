@@ -18,16 +18,19 @@ const navList = arrMenuItems.map(
     }
 )
 
+let idx = 0;
 
 window.addEventListener('scroll', function(){
-    let scrollPosition = window.scrollY;
-    let target = this.document.querySelector(".nav-title")
-    if(window.innerWidth > 400) {
-      if(scrollPosition >= 959) target.classList.add('show');
-      else target.classList.remove('show');
-    }else{
-      if(scrollPosition >= 103) target.classList.add('show');
-      else target.classList.remove('show');
+    let target = this.document.querySelector(".nav-title");
+    if(target){
+      if(idx+1 > document.getElementsByClassName("slide-image-box").length) idx = 0;
+      let imgId = "i" + idx++;
+      let imgHeight = this.document.getElementById(imgId).offsetHeight;
+      if(imgHeight){
+        let scrollPosition = window.scrollY;
+        if(scrollPosition >= imgHeight) target.classList.add('show');
+        else target.classList.remove('show');
+      }
     }
 })
 

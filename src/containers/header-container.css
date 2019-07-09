@@ -1,12 +1,15 @@
 .header {
     height: 77px;
     background: #000000d0;
+    position: sticky;
+    top: 0px;
     border-bottom: 3px solid rgb(44, 44, 44);
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
     padding: 0 220px 0px 220px;
     color: #fff;
     user-select: none;
+    z-index: 9999;
 }
 
 @media screen and (max-width:1500px){

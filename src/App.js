@@ -15,10 +15,9 @@ import {
   Header, 
   Home,
   SignIn,
-  Footer
+  Footer,
+  About
 } from 'containers';
-
-import PageAbout from "components/about/page-about.jsx";
 
 library.add(faBars, faTimes, faBinoculars, faBook, faCalendarAlt, faHandHoldingHeart, faChevronDown);
 
@@ -36,7 +35,7 @@ class App extends Component {
           <Header/>
           <Route exact path="/"       component={Home}/>
           <Route exact path="/login"  component={SignIn}/>
-          <Route exact path="/about"  component={PageAbout}/>
+          <Route exact path="/about"  component={About}/>
         </BrowserRouter>
         <Footer/>
       </Store.Provider>

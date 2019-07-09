@@ -8,7 +8,9 @@ const Gallery = () => {
     return (
         <div className="contents-containers" id="m5">
             <h2>갤러리</h2>
-            <FontAwesomeIcon icon="chevron-down" className="fa-4x">더보기</FontAwesomeIcon>
+            <div className="read-more-arrow">
+                <FontAwesomeIcon icon="chevron-down" className="fa-4x"/>
+            </div>
         </div>
     );
 }

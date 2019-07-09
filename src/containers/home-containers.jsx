@@ -4,7 +4,6 @@ import React, { Component } from 'react';
 //components
 import {
   ImageSlide,
-  ContentsNavBar,
   About,
   Members,
   Curriculum,
@@ -79,7 +78,6 @@ class Home extends Component {
             handleClickEvent={slideEvent}
           />
         </div>
-        <ContentsNavBar/>
         <div className="main-contents">
           <div className="section">
             <About/>

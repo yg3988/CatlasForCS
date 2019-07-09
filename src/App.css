@@ -16,17 +16,21 @@ body{
 }
 
 .horizen-divider{
-    border: 1px solid #c2c2c2;   
+    border: 1px solid #c2c2c2;
 }
 
 .horizen-divider{
     margin: 8px 0;
-    border-bottom: 1px solid #c2c2c2;   
+    border-bottom: 1px solid #c2c2c2;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
 }
 
 .lnk{
     color: #fff;
-    text-decoration: none;
 }
 
 .btn{
@@ -61,8 +65,4 @@ body{
 
 .btn-secondary:hover{
     background-color: #C9C9C9;
-}
-
-.contents{
-    height: calc(100vh - 80px);
 }

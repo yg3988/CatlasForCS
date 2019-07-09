@@ -6,9 +6,37 @@ import { FontAwesomeIcon }  from '@fortawesome/react-fontawesome';
 //stylesheet
 import "./header.css"
 
+const arrMenuItems = ["학과소개", "구성원", "교과", "소식", "게시판", "갤러리"]
+
+window.addEventListener('scroll', function(){
+    let target = this.document.querySelector(".nav-menu");
+    if(target){
+      let img = this.document.getElementById("slider");
+      if(img){
+        let imgHeight = img.offsetHeight;
+        let scrollPosition = window.scrollY;
+        if(scrollPosition >= imgHeight) target.classList.add('shown');
+        else target.classList.remove('shown');
+      }else
+        target.classList.add('shown');
+    }
+})
+
+const navList = arrMenuItems.map(
+    (item, index) => {
+        return (
+            <li key={index} className="nav-menu-items">
+                <a href={`/#m${index}`} className="lnk">
+                    {item}
+                </a>
+            </li>
+        )
+    }
+)
+
 const ComponentHeader = ({title}) => {
     return (
-        <div>
+        <div className="header-container">
             <p className="header-title">
                 <Link to="/" className="lnk header-lnk-title">{title}</Link>
             </p>
@@ -17,6 +45,9 @@ const ComponentHeader = ({title}) => {
                 <FontAwesomeIcon icon="bars"/>
             </label>
             <ul className="header-menu">
+                <ul className="nav-menu">
+                    {navList}
+                </ul>
                 <Link to="/" className="lnk header-menu-items header-menu-items-unborder">Home</Link>
                 <a href="#" className="lnk header-menu-items header-menu-items-unborder">About</a>
                 <Link to="/login" className="lnk header-menu-items">
