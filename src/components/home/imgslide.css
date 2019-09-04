@@ -40,7 +40,7 @@
 .slide-image-box:hover > .jumbo-image-about{
     display: block;
     background-color: rgba(0, 0, 0, 0.500);
-    z-index: 999;
+    z-index: 99;
 }
 
 .slide-image-animation{
@@ -57,6 +57,7 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
+    z-index: 999;
 }
 
 .circle-nav-btn{
