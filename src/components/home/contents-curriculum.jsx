@@ -26,7 +26,6 @@ const Curriculum = () => {
         <div className="curriculum-contents">
           <h2>학사과정 및 교과를 알려드립니다.</h2>
           <p className="pram lorem-pram-dark">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum eveniet hic saepe, voluptatem corporis, eum dicta reprehenderit similique officiis explicabo itaque, commodi quod incidunt alias assumenda ad odit cupiditate exercitationem.</p>
-          <button className="btn btn-primary btn-more">Read more..</button>
         </div>
         {boxButtonList}
       </section>

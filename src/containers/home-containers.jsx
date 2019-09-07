@@ -60,14 +60,12 @@ class Home extends Component {
   }
     
   componentDidMount(){
-    console.log("componentDidMount");
     isHome = true;
     timeoutSlideEvent();
   }
 
   componentWillUnmount(){
     isHome = false;
-    console.log("componentWillUnmount");
   }
     
   render() { 

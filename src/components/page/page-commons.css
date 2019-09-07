@@ -1,0 +1,24 @@
+.page-commons-container{
+    padding-left: 20px;
+}
+
+.dept-contents {
+    padding-bottom: 40px;
+}
+
+h2{
+    font-size: 2.0rem;
+}
+
+.dept-contents h2 {
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+.dept-description {
+    font-size: 1.1rem;
+}
+
+.dept-description {
+    padding-left: 20px;
+}

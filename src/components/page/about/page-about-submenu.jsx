@@ -2,12 +2,12 @@
 import React from 'react';
 
 //style
-import "./page-about-submenu.css";
+import "../page-submenu.css";
 
-const arrSubmenu = ["학과 소개", "연혁"];
-const itemID = ["dept-introduce", "dept-history"]
+let arrSubmenu = ["학과 소개", "연혁"];
+let itemID = ["dept-introduce", "dept-history"]
 
-const submenuItem = arrSubmenu.map(
+let submenuItem = arrSubmenu.map(
     (item, index) => {
         return(
             <a key={index} href={`/about#${itemID[index]}`} className="submenu-item">

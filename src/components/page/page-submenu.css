@@ -2,15 +2,18 @@
     width: 20vw;
     padding: 40px 0;
     padding-right: 20px;
+    border-right-width: 3px;
+    border-right-style: dotted;
+    border-right-color: #2a2a2a;
 }
 
 .submenu-title{
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
 }
 
 .no-style-list{
-    padding: 30px 0px;
+    padding-top: 5px;
     padding-left: 40px;
     list-style-type: none;
 }
@@ -19,6 +22,6 @@
     font-size: 16px;
 }
 
-.submenu-item + .submenu-item{
-    padding-top: 14px;
+a > li{
+    padding-top: 10px;
 }

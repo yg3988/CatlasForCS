@@ -2,13 +2,13 @@
 import React, { Component } from 'react';
 
 //component
-import AboutSubMenu         from "components/page/about/page-about-submenu";
-import About                from "components/page/about/page-about";
+import MembersSubMenu         from "components/page/members/page-members-submenu";
+import Members                from "components/page/members/page-members";
 
 //style
 import "./page-containers.css";
 
-class PageAbout extends Component {
+class PageMembers extends Component {
     constructor(props) {
         super(props);
         this.state = {  }
@@ -17,18 +17,14 @@ class PageAbout extends Component {
     componentDidMount(){
         window.scrollTo(0,0);
     }
-
-    componentWillUnmount(){
-        console.log("componentWillUnmount");
-    }
     render() { 
         return (
             <div className="page-container">
-                <AboutSubMenu/>
-                <About/>
+                <MembersSubMenu/>
+                <Members/>
             </div>
         );
     }
 }
  
-export default PageAbout;
+export default PageMembers;

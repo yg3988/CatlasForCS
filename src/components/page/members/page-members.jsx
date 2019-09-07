@@ -2,14 +2,21 @@
 import React from 'react';
 
 //styles
-import "./page-about.css"
+import "../page-commons.css"
+import "./page-members.css"
 
-const About = () => {
+//etc..
+import { importAllImages } from "components/import-images";
+
+let arrImages = importAllImages(require.context('../../../images/professor',false, /\.(png|jpe?g)$/));
+
+const Members = () => {
+    
     return (
-        <div className="dept-about-container">
-            <div id="dept-introduce" className="dept-about-contents dept-introduce">
-                <h2>학과 소개</h2>
-                <div className="dept-about-description">
+        <div className="page-commons-container dept-members-container">
+            <div id="dept-professor" className="dept-contents dept-introduce">
+                <h2>교수진 소개</h2>
+                <div className="dept-description members-description">
                     <h4>경상대학교 컴퓨터과학과에 오신 것을 환영합니다.</h4>
                     <br/>
                     <h3>경상대학교 컴퓨터 과학과는 <span style={{color: "#3498db"}}>글로벌 IT전문 인력 양성</span>을 위해 최선을 다하겠습니다.</h3>
@@ -35,10 +42,10 @@ const About = () => {
                     </p>
                 </div>
             </div>
-            <div id="dept-history" className="dept-about-contents dept-history">
-                <h2>학과 연혁</h2>
+            <div id="dept-assistant" className="dept-members-contents dept-history">
+                <h2>조교진 소개</h2>
 
-                <ul className="dept-history-timeline">
+                <ul className="dept-assistant-timeline">
                     <li className="event" data-date="1979">
                         <h3>전산통계학과 설립 인가</h3>
                     </li>
@@ -60,4 +67,4 @@ const About = () => {
     );
 }
  
-export default About;
+export default Members;
