@@ -10,7 +10,7 @@ const navList = arrMenuItems.map(
     (item, index) => {
         return (
             <li key={index} className="menu-items">
-                <a href={`#m${index}`} className="lnk">
+                <a href={`#section${index}`} className="lnk">
                     {item}
                 </a>
             </li>

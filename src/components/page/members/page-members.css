@@ -1,0 +1,25 @@
+.members-list{
+    list-style: none;
+}
+
+.members-list-item{
+    height: 100%;
+}
+
+.members-list-item + .members-list-item{
+    padding-top: 10px;
+}
+
+.item-contents{
+    list-style: none;
+}
+
+.member-containers{
+    display: flex;
+}
+
+.members-img{
+    width: 117px;
+    height: calc(117px * (13/9));
+    padding-right: 20px;
+}

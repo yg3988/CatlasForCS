@@ -77,22 +77,22 @@ class Home extends Component {
           />
         </div>
         <div className="main-contents">
-          <div className="section">
+          <div id="section0" className="section">
             <About/>
           </div>
-          <div className="section">
+          <div id="section1" className="section">
             <Members/>
           </div>
-          <div className="section">
+          <div id="section2" className="section">
             <Curriculum/>
           </div>
-          <div className="section">
+          <div id="section3" className="section">
             <Notice/>
           </div>
-          <div className="section">
+          <div id="section4" className="section">
             <Board/>
           </div>
-          <div className="section">
+          <div id="section5" className="section">
             <Gallery/>
           </div>
         </div>

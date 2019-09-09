@@ -51,7 +51,6 @@ const imagesNavigation = (images) => {
 
 const ImageSlide = ({handleClickEvent}) => {
     const images = importAllImages(require.context('../../images',false, /\.(png|jpe?g)$/));
-
     return (
         <div className='slide-body'>
             {imagesRadioBtns(images, handleClickEvent)}
