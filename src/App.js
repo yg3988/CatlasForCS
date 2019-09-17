@@ -17,7 +17,8 @@ import {
   SignIn,
   Footer,
   About,
-  Members
+  Members,
+  Curriculum,
 } from 'containers';
 
 library.add(faBars, faTimes, faBinoculars, faBook, faCalendarAlt, faHandHoldingHeart, faChevronDown);
@@ -34,10 +35,11 @@ class App extends Component {
       <Store.Provider value={this.state} className="App">
         <BrowserRouter>
           <Header/>
-          <Route exact path="/"         component={Home}/>
-          <Route exact path="/login"    component={SignIn}/>
-          <Route exact path="/about"    component={About}/>
-          <Route exact path="/members"  component={Members}/>
+          <Route exact path="/"           component={Home}/>
+          <Route exact path="/login"      component={SignIn}/>
+          <Route exact path="/about"      component={About}/>
+          <Route exact path="/members"    component={Members}/>
+          <Route exact path="/curriculum" component={Curriculum}/>
         </BrowserRouter>
         <Footer/>
       </Store.Provider>

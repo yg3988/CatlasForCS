@@ -1,20 +1,24 @@
 //node_modules
 import React                from 'react';
 import { FontAwesomeIcon }  from '@fortawesome/react-fontawesome';
+import { Link }             from 'react-router-dom';
+
 //styles
 import './contents-curriculum.css'
 
 const arrLabels = ["교과 과정", "교육 목표", "학사 일정", "장학 안내"];
-const arrClassName = ["curriculum", "curriculum-goal", "curriculum-schedule", "scholarship"]
+const arrClassName = ["curriculum", "curriculum-goal", "curriculum-schedule", "scholarship"];
 const arrIcons = ["book", "binoculars", "calendar-alt", "hand-holding-heart"];
 
 const boxButtonList = arrLabels.map(
   (lable, index) => {
     return(
-      <div key={index} className={`box ${arrClassName[index]}`}>
-        <FontAwesomeIcon icon={`${arrIcons[index]}`} className="fa-4x"/>
-        <p className="box-label">{lable}</p>
-      </div>
+      <Link to={`/${arrClassName[index]}`} className={`box ${arrClassName[index]}`}  key={index}>
+        <div>
+          <FontAwesomeIcon icon={`${arrIcons[index]}`} className="fa-4x"/>
+          <p className="box-label">{lable}</p>
+        </div>
+      </Link>
     )
   }
 )
