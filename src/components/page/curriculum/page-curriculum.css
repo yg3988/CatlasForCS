@@ -1,0 +1,27 @@
+.majors{
+    margin-top: 10px;
+    width: 100%;
+    background-color: #efefef;
+}
+
+.major-kind{
+    margin: auto;
+    width: 12%;
+}
+
+.major-kind span{
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.major-kind span:hover{
+    border-bottom: 2px solid #3498db
+}
+
+.major-kind span+span{
+    margin-left: 10px;
+}
+
+.curriculum-contents h2{
+    padding-top: 80px;
+}

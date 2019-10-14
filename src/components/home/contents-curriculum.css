@@ -10,6 +10,23 @@
     grid-area: curriculum-contents;
     min-height: 462px;
     justify-content: center;
+    max-width: 849px;
+}
+
+.curriculum-contents > p {
+    padding: 0 20px 24px 20px;
+}
+
+.box {
+    padding: 20px;
+    padding-top: 62px;
+    min-width: 280px;
+    border-bottom: 1px solid #c2c2c2;
+    border-right: 1px solid #c2c2c2;
+}
+
+.box:nth-child(2n) {
+    border-left: 1px solid #c2c2c2;
 }
 
 .curriculum {
@@ -26,28 +43,6 @@
 
 .scholarship {
     grid-area: scholarship;
-}
-
-@media screen and (max-width: 1920px) {
-    .curriculum-contents{
-        max-width: 849px;
-    }
-
-    .curriculum-contents > p {
-        padding: 0 20px 24px 20px;
-    }
-
-    .box {
-        padding: 20px;
-        padding-top: 62px;
-        min-width: 280px;
-        border-bottom: 1px solid #c2c2c2;
-        border-right: 1px solid #c2c2c2;
-    }
-    
-    .box:nth-child(2n) {
-        border-left: 1px solid #c2c2c2;
-    }
 }
 
 @media screen and (max-width: 1440px) {
@@ -72,6 +67,7 @@
     }
 
     .curriculum-contents {
+        
         min-height: 200px;
     }
 
@@ -91,8 +87,12 @@
         min-height: 200px;
     }
 }
-
-@media screen and (max-width: 820px) {
+@media screen and (max-width: 400px){
+    .contents-containers{
+        height: 490px;
+    }
+}
+@media screen and (max-width: 924px) {
     .curriculum-container {
         min-height: 1327px;
         padding: 0;

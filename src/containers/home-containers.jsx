@@ -70,7 +70,7 @@ class Home extends Component {
     
   render() { 
     return ( 
-      <div className="containers">
+      <div className="home-containers">
         <div className="jumbo-slider">
           <ImageSlide
             handleClickEvent={slideEvent}

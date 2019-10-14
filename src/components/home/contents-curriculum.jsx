@@ -7,19 +7,31 @@ import { Link }             from 'react-router-dom';
 import './contents-curriculum.css'
 
 const arrLabels = ["교과 과정", "교육 목표", "학사 일정", "장학 안내"];
-const arrClassName = ["curriculum", "curriculum-goal", "curriculum-schedule", "scholarship"];
+const arrClassName = ["curriculum", "education-goal", "curriculum-schedule", "scholarship"];
+const arrClassLink = ["curriculum", "education-goal", `http://service.gnu.ac.kr/sub/03_01.jsp`, `http://service.gnu.ac.kr/sub/05_01.jsp`];
 const arrIcons = ["book", "binoculars", "calendar-alt", "hand-holding-heart"];
 
 const boxButtonList = arrLabels.map(
   (lable, index) => {
-    return(
-      <Link to={`/${arrClassName[index]}`} className={`box ${arrClassName[index]}`}  key={index}>
-        <div>
-          <FontAwesomeIcon icon={`${arrIcons[index]}`} className="fa-4x"/>
-          <p className="box-label">{lable}</p>
-        </div>
-      </Link>
-    )
+    if(index<2){
+      return(
+        <Link to={arrClassLink[index]} className={`box ${arrClassName[index]}`}  key={index}>
+          <div>
+            <FontAwesomeIcon icon={`${arrIcons[index]}`} className="fa-4x"/>
+            <p className="box-label">{lable}</p>
+          </div>
+        </Link>
+      ) 
+    } else {    
+      return(
+        <a className={`box ${arrClassName[index]}`} href={arrClassLink[index]} key={index}>
+          <div>
+            <FontAwesomeIcon icon={`${arrIcons[index]}`} className="fa-4x"/>
+            <p className="box-label">{lable}</p>
+          </div>
+        </a>
+      )
+    }
   }
 )
 

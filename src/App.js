@@ -19,6 +19,7 @@ import {
   About,
   Members,
   Curriculum,
+  CurriculumGoal
 } from 'containers';
 
 library.add(faBars, faTimes, faBinoculars, faBook, faCalendarAlt, faHandHoldingHeart, faChevronDown);
@@ -26,8 +27,21 @@ library.add(faBars, faTimes, faBinoculars, faBook, faCalendarAlt, faHandHoldingH
 class App extends Component {
   constructor(props) {
     super(props);
+    this._handleNecessaryFlag = () => {
+      this.setState({
+        isMajorNecessary: true
+      });
+    }
+    this._handleSelectionFlag = () => {
+      this.setState({
+        isMajorNecessary: false
+      });
+    }
     this.state = {
-      title: "Catlas"
+      title: "Catlas",
+      isMajorNecessary: true,
+      handleNecessaryFlag: this._handleNecessaryFlag,
+      handleSelectionFlag: this._handleSelectionFlag
     }
   }
   render() { 
@@ -40,6 +54,7 @@ class App extends Component {
           <Route exact path="/about"      component={About}/>
           <Route exact path="/members"    component={Members}/>
           <Route exact path="/curriculum" component={Curriculum}/>
+          <Route exact path="/education-goal" component={CurriculumGoal}/>
         </BrowserRouter>
         <Footer/>
       </Store.Provider>

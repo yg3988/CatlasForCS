@@ -1,31 +1,38 @@
 //node_modules
 import React from 'react';
 
-//
-let arrGrade = ["1학년", "2학년", "3학년", "4학년"];
-let arrCurriculum = [
-    ["C언어", "객체지향언어실습"],
-    ["기초설계 및 프로젝트","컴퓨터시스템개론", "소프트웨어공학론", "웹프로그래밍/실습", "자료구조", "Java프로그래밍/실습"],
-    [],
-    []
-];
+//import store
+import Store from "store/store";
 
-let showGradeCurriculum = arrGrade.map(
-    (item, index) => {
-        return(
-            <div>
-                <h2>{item}</h2>
-            </div>
-        )
-    }
-)
+//import components
+import TableMajorNecessary from "./table-major-necessary";
+import TableMajorSelection from "./table-major-selection";
+
+//import style
+import "./page-curriculum.css";
 
 const Curriculum = () => {
-    return (
-        <div className="page-commons-container dept-contents">
-            {showGradeCurriculum}
-        </div>
-    );
+	let datePresentYear = new Date().getFullYear();
+	return (
+		<div className="page-commons-container">
+			<h1>{datePresentYear} 학년도</h1>
+				<div className="majors">
+					<div className="major-kind">
+						<Store.Consumer>
+							{store => (<span onClick={store.handleNecessaryFlag}>필수</span>)}
+						</Store.Consumer>
+						<Store.Consumer>
+							{store => (<span onClick={store.handleSelectionFlag}>선택</span>)}
+						</Store.Consumer>
+					</div>
+				</div>
+				<div className="dept-contents">
+					<Store.Consumer>
+						{store=>(store.isMajorNecessary ? <TableMajorNecessary/> : <TableMajorSelection/>)}
+					</Store.Consumer>
+				</div>
+		</div>
+	);
 }
  
 export default Curriculum;

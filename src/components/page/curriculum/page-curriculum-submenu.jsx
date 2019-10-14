@@ -9,7 +9,7 @@ let arrSubmenu = ["1학년", "2학년", "3학년", "4학년"];
 let submenuItem = arrSubmenu.map(
     (item, index) => {
         return(
-            <a key={index} className="submenu-item">
+            <a key={index} className="submenu-item" href={`/curriculum/#c${index}`}>
                 <li>
                     {item}
                 </li>
