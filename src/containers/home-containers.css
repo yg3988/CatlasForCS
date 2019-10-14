@@ -38,8 +38,8 @@
 }
 
 .box:hover{
-    background-color: #3498db;
-    border-color: #3498db;
+    background-color: var(--primary-btn-color);
+    border-color: var(--primary-btn-color);
     color: #fff;
     cursor: pointer;
 }

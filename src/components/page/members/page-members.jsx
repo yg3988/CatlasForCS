@@ -71,15 +71,16 @@ const Members = () => {
         <div className="page-commons-container dept-members-container">
             <div id="dept-professor" className="dept-contents dept-introduce">
                 <h2>교수진 소개</h2>
+                <div className="horizen-divider"></div>
                 <div className="dept-description members-description">
                     <ul className="members-list prof-list">
                         {listProf(objListProfImages)}
                     </ul>
                 </div>
             </div>
-            <div id="dept-assistant" className="dept-members-contents dept-history">
+            <div id="dept-assistant" className="dept-contents dept-history">
                 <h2>조교진 소개</h2>
-
+                <div className="horizen-divider"></div>
                 <div className="dept-description members-description">
                     <ul className="members-list assi-list">
                         {listAssi(objListAssiImages)}

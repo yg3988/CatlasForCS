@@ -1,12 +1,12 @@
 .header {
     height: 77px;
-    background: #2a2a2a;
+    background: var(--primary-color);
     position: sticky;
     top: 0px;
-    border-bottom: 3px solid rgb(44, 44, 44);
+    border-bottom: 3px solid var(--primary-color);
     border-bottom-left-radius: 2px;
     border-bottom-right-radius: 2px;
-    padding: 0 220px 0px 220px;
+    padding: 0 calc(100vw / 188 * 22);
     color: #fff;
     user-select: none;
     z-index: 9999;

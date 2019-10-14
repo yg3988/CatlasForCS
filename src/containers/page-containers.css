@@ -4,5 +4,5 @@
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
     display: flex;
-    margin: 80px 220px;
+    margin: 80px calc(100vw / 188 * 22);
 }

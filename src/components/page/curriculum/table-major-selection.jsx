@@ -58,11 +58,13 @@ const showTableCurriculumGrade = arrMajorSeletion.map(
 
 
 const TableMajorSelection = () => {
-    return (
-        <div>
-            {showTableCurriculumGrade}
-        </div>
-    );
+	let datePresentYear = new Date().getFullYear();
+  return (
+    <div>
+			<h1>{datePresentYear} 학년도 전공 선택</h1>
+      {showTableCurriculumGrade}
+    </div>
+  );
 }
  
 export default TableMajorSelection;

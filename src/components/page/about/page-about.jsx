@@ -10,6 +10,7 @@ const About = () => {
         <div className="page-commons-container dept-about-container">
             <div id="dept-introduce" className="dept-contents dept-introduce">
                 <h2>학과 소개</h2>
+                <div className="horizen-divider"></div>
                 <div className="dept-description about-description">
                     <h4>경상대학교 컴퓨터과학과에 오신 것을 환영합니다.</h4>
                     <br/>
@@ -36,9 +37,9 @@ const About = () => {
                     </p>
                 </div>
             </div>
-            <div id="dept-history" className="dept-about-contents dept-history">
+            <div id="dept-history" className="dept-contents dept-history">
                 <h2>학과 연혁</h2>
-
+                <div className="horizen-divider"></div>
                 <ul className="dept-history-timeline">
                     <li className="event" data-date="1979">
                         <h3>전산통계학과 설립 인가</h3>

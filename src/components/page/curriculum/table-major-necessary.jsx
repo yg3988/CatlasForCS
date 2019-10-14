@@ -59,8 +59,10 @@ const showTableCurriculumGrade = arrMajorNecessary.map(
 )
 
 const TableMajorNecessary = () => {
+	let datePresentYear = new Date().getFullYear();
   return (
     <div>
+			<h1>{datePresentYear} 학년도 전공 필수</h1>
       {showTableCurriculumGrade}
     </div>
   );

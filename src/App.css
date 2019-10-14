@@ -17,13 +17,48 @@ body{
     user-select: none;
 }
 
-.horizen-divider{
-    border: 1px solid #c2c2c2;
+:root{
+    --primary-color: #2a2a2a;
+    --secondary-color: #e2e2e2;
+    --divider-color: #c2c2c2;
+    --primary-btn-color: #3498db;
+    --secondary-color-shadow: #C9C9C9;
+    --background-color: #efefef;
+    --background-color-shadow: #707070;
 }
 
 .horizen-divider{
-    margin: 8px 0;
-    border-bottom: 1px solid #c2c2c2;
+    border-top: 1px solid var(--divider-color);
+    border-bottom: 1px solid var(--divider-color);
+    margin-bottom: 8px;
+}
+
+.divider-margin-top-x1{
+    margin-top: 8px;
+}
+
+.divider-margin-top-x2{
+    margin-top: 16px;
+}
+
+.divider-margin-bottom-x2{
+    margin-bottom: 16px;
+}
+
+.divider-margin-top-x3{
+    margin-top: 24px;
+}
+
+.divider-margin-bottom-x3{
+    margin-bottom: 24px;
+}
+
+.divider-margin-top-x4{
+    margin-top: 32px;
+}
+
+.divider-margin-bottom-x4{
+    margin-bottom: 32px;
 }
 
 a{
@@ -45,26 +80,87 @@ a{
 }
 
 .btn-primary{
-    background-color: #3498db;
+    background-color: var(--primary-btn-color);
     background-repeat: no-repeat;
 
-    border: 1px solid #3498db;
+    border: 1px solid var(--primary-btn-color);
     border-radius: 4px;
     
     color: #fff;
 }
 
 .btn-primary:hover{
-    background-color: #2F87C2;
+    background-color: var(--primary-btn-color);
 }
 
 .btn-secondary{
-    background-color: #e2e2e2;
+    background-color: var(--secondary-color);
     
-    border: 1px solid #c2c2c2;
+    border: 1px solid var(--divider-color);
     border-radius: 4px;
 }
 
 .btn-secondary:hover{
-    background-color: #C9C9C9;
+    background-color: var(--secondary-color-shadow);
+}
+
+ul li{
+    list-style-type: none;
+}
+
+ol li{
+    list-style-type: none;
+}
+
+table{
+    display: table;
+    width: 100%;
+    border-top-width: 3px;
+    border-top-style: solid;
+    border-bottom-width: 3px;
+    border-bottom-style: solid;
+    border-color: var(--primary-color);
+}
+
+table tr{
+    height: 62px;
+}
+
+table tr td{
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+
+table tr td:first-child{
+    width: 91px;
+    color: var(--background-color-shadow);
+    text-align: center;
+}
+
+table tr td:last-child{
+    width: 190px;
+}
+
+table tr td .items-title{
+    float: left;
+    
+    overflow: hidden;
+    text-align: left;
+}
+
+table tr td ul{
+    float: right;
+    overflow: hidden;
+    position: relative;
+    margin-right: 44px;
+}
+
+table tr td li{
+    font-size: 0.8rem;
+    float: left;
+}
+
+table tr td li:first-child{
+    margin-right: 24px;
 }

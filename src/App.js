@@ -19,7 +19,8 @@ import {
   About,
   Members,
   Curriculum,
-  CurriculumGoal
+  CurriculumGoal,
+  Notice
 } from 'containers';
 
 library.add(faBars, faTimes, faBinoculars, faBook, faCalendarAlt, faHandHoldingHeart, faChevronDown);
@@ -37,11 +38,24 @@ class App extends Component {
         isMajorNecessary: false
       });
     }
+    this._handleUnivNoticeFlag = () => {
+      this.setState({
+        flagNotice: 1
+      });
+    }
+    this._handleEduNoticeFlag = () => {
+      this.setState({
+        flagNotice: 2
+      })
+    }
     this.state = {
       title: "Catlas",
       isMajorNecessary: true,
+      flagNotice: 1,
       handleNecessaryFlag: this._handleNecessaryFlag,
-      handleSelectionFlag: this._handleSelectionFlag
+      handleSelectionFlag: this._handleSelectionFlag,
+      handleUnivNoticeFlag: this._handleUnivNoticeFlag,
+      handleEduNoticeFlag: this._handleEduNoticeFlag
     }
   }
   render() { 
@@ -49,12 +63,13 @@ class App extends Component {
       <Store.Provider value={this.state} className="App">
         <BrowserRouter>
           <Header/>
-          <Route exact path="/"           component={Home}/>
-          <Route exact path="/login"      component={SignIn}/>
-          <Route exact path="/about"      component={About}/>
-          <Route exact path="/members"    component={Members}/>
-          <Route exact path="/curriculum" component={Curriculum}/>
+          <Route exact path="/"               component={Home}/>
+          <Route exact path="/login"          component={SignIn}/>
+          <Route exact path="/about"          component={About}/>
+          <Route exact path="/members"        component={Members}/>
+          <Route exact path="/curriculum"     component={Curriculum}/>
           <Route exact path="/education-goal" component={CurriculumGoal}/>
+          <Route exact path="/notice"         component={Notice}/>
         </BrowserRouter>
         <Footer/>
       </Store.Provider>
