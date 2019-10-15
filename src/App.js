@@ -1,6 +1,7 @@
 //node_modules
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
+import { FontAwesomeIcons } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core'
 //icons
 import { faBars, faTimes, faBinoculars, faBook, faCalendarAlt, faHandHoldingHeart, faChevronDown } from '@fortawesome/free-solid-svg-icons';
