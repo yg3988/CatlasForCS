@@ -1,43 +1,46 @@
 //node_modules
-import React from 'react';
+import React from "react";
 
 //styles
-import "../page-commons.css"
+import "../page-commons.css";
 
-let items = [1, "테스트", "2019-10-14", 0]
-const ListTableItem = (item) => {
-  return(
-    <tr>
-      <td>{item[0]}</td>
-      <td>
-        <div className="items-title">
-          {item[1]}
-        </div>
-      </td>
-      <td>
-      <ul>
-          <li>
-            {item[2]}
-          </li>
-          <li>
-            {item[3]}
-          </li>
-        </ul>
-      </td>
-    </tr>
-  )
-}
+const UnivNotcie = ({ postlist }) => {
+	return (
+		<div className="page-commons-container">
+			<h1>공지 사항</h1>
+			<div className="horizen-divider divider-margin-top-x4 divider-margin-bottom-x4"></div>
+			<table>
+				<tbody>
+					{postlist.map(element => {
+						const { title, url, date, read } = element.toJS();
+						console.log("title : " + title);
+						console.log("url : " + url);
+						console.log("date : " + date);
+						console.log("read : " + read);
+						return (
+							<tr key={element}>
+								<td>공지</td>
+								<td>
+									<a
+										href={`http://cs.gnu.ac.kr/csadmin/sub.do${url}`}
+										className="items-title"
+									>
+										{title}
+									</a>
+								</td>
+								<td>
+									<ul>
+										<li>{date}</li>
+										<li>{read}</li>
+									</ul>
+								</td>
+							</tr>
+						);
+					})}
+				</tbody>
+			</table>
+		</div>
+	);
+};
 
-const UnivNotcie = () => {
-  return (
-    <div className="page-commons-container">
-      <h1>공지 사항</h1>
-      <div className="horizen-divider divider-margin-top-x4 divider-margin-bottom-x4"></div>
-      <table>
-        {ListTableItem(items)}
-      </table>
-    </div>
-  );
-}
- 
 export default UnivNotcie;

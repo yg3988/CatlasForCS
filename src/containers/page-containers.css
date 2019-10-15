@@ -1,8 +1,7 @@
-.page-container{
-    
-    font-family: -apple-system, "NanumSquareRound", BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-    display: flex;
-    margin: 80px calc(100vw / 188 * 22);
+.page-container {
+	font-family: -apple-system, "NanumSquareRound", BlinkMacSystemFont, "Segoe UI",
+		"Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+		"Helvetica Neue", sans-serif;
+	display: flex;
+	margin: 80px calc(100vw / 188 * 22);
 }
