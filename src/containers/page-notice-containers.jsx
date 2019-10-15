@@ -1,6 +1,5 @@
 //import modules
 import React, { Component } from "react";
-import cheerio from "cheerio";
 
 //components
 import NoticeSubMenu from "components/page/notice/page-notice-submenu";
