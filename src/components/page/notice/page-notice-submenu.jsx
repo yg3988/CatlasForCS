@@ -14,17 +14,17 @@ const AboutSubMenu = () => {
 				<store.Consumer>
 					{store => (
 						<li onClick={store.handleUnivNoticeFlag} className="submenu-item">
-							공지사항
+							주요 공지
 						</li>
 					)}
 				</store.Consumer>
-				{/* <store.Consumer>
+				<store.Consumer>
 					{store => (
 						<li onClick={store.handleEduNoticeFlag} className="submenu-item">
-							학사공지
+							공지 사항
 						</li>
 					)}
-				</store.Consumer> */}
+				</store.Consumer>
 			</ul>
 		</div>
 	);

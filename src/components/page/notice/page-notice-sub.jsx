@@ -4,34 +4,31 @@ import React from "react";
 //styles
 import "../page-commons.css";
 
-const EduNotcie = ({ postlist }) => {
+const SubNotcie = ({ postlist }) => {
+	//const SubNotcie = () => {
 	return (
 		<div className="page-commons-container">
-			<h1>학사 공지</h1>
+			<h1>공지</h1>
 			<div className="horizen-divider divider-margin-top-x4 divider-margin-bottom-x4">
 				<table>
 					<tbody>
 						{postlist.map(element => {
-							const { title, url, date, read } = element.toJS();
-							console.log("title : " + title);
-							console.log("url : " + url);
-							console.log("date : " + date);
-							console.log("read : " + read);
+							console.log(element);
 							return (
-								<tr key={element}>
-									<td>공지</td>
+								<tr key={element.No}>
+									<td>{element.No}</td>
 									<td>
 										<a
-											href={`https://www.gnu.ac.kr/program/multipleboard/${url}`}
+											href={`http://cs.gnu.ac.kr/csadmin/sub.do${element.URL}`}
 											className="items-title"
 										>
-											{title}
+											{element.Title}
 										</a>
 									</td>
 									<td>
 										<ul>
-											<li>{date}</li>
-											<li>{read}</li>
+											<li>{element.WrittenDate.split("T")[0]}</li>
+											<li>{element.Hit}</li>
 										</ul>
 									</td>
 								</tr>
@@ -44,4 +41,4 @@ const EduNotcie = ({ postlist }) => {
 	);
 };
 
-export default EduNotcie;
+export default SubNotcie;

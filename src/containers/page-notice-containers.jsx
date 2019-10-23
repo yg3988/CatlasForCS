@@ -3,19 +3,19 @@ import React, { Component } from "react";
 
 //components
 import NoticeSubMenu from "components/page/notice/page-notice-submenu";
-import UnivNotice from "./page-notice-univ-containers";
-// import EduNotice from "./page-notice-edu-containers";
+import MainNotice from "./page-notice-main-containers";
+import SubNotice from "./page-notice-sub-containers";
 
 //store
-// import store from "store/store";
+import store from "store/store";
 
-// const NoticeBoard = flag => {
-// 	if (flag === 1) {
-// 		return <UnivNotice />;
-// 	} else if (flag === 2) {
-// 		return <EduNotice />;
-// 	}
-// };
+const NoticeBoard = flag => {
+	if (flag === 1) {
+		return <MainNotice />;
+	} else if (flag === 2) {
+		return <SubNotice />;
+	}
+};
 
 class PageNotice extends Component {
 	constructor(props) {
@@ -27,10 +27,9 @@ class PageNotice extends Component {
 		return (
 			<div className="page-container">
 				<NoticeSubMenu />
-				{/* <store.Consumer>
+				<store.Consumer>
 					{store => NoticeBoard(store.flagNotice)}
-				</store.Consumer> */}
-				<UnivNotice />
+				</store.Consumer>
 			</div>
 		);
 	}

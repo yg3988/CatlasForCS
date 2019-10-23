@@ -4,7 +4,8 @@ import React from "react";
 //styles
 import "../page-commons.css";
 
-const UnivNotcie = ({ postlist }) => {
+const MainNotice = ({ postlist }) => {
+	//const MainNotice = () => {
 	return (
 		<div className="page-commons-container">
 			<h1>공지 사항</h1>
@@ -12,26 +13,22 @@ const UnivNotcie = ({ postlist }) => {
 			<table>
 				<tbody>
 					{postlist.map(element => {
-						const { title, url, date, read } = element.toJS();
-						console.log("title : " + title);
-						console.log("url : " + url);
-						console.log("date : " + date);
-						console.log("read : " + read);
+						console.log(element);
 						return (
-							<tr key={element}>
+							<tr key={element.No}>
 								<td>공지</td>
 								<td>
 									<a
-										href={`http://cs.gnu.ac.kr/csadmin/sub.do${url}`}
+										href={`http://cs.gnu.ac.kr/csadmin/sub.do${element.URL}`}
 										className="items-title"
 									>
-										{title}
+										{element.Title}
 									</a>
 								</td>
 								<td>
 									<ul>
-										<li>{date}</li>
-										<li>{read}</li>
+										<li>{element.WrittenDate.split("T")[0]}</li>
+										<li>{element.Hit}</li>
 									</ul>
 								</td>
 							</tr>
@@ -43,4 +40,4 @@ const UnivNotcie = ({ postlist }) => {
 	);
 };
 
-export default UnivNotcie;
+export default MainNotice;
